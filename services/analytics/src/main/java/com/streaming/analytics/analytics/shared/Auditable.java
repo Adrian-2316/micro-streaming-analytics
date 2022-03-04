@@ -1,4 +1,4 @@
-package com.streaming.analytics.analytics.content.shared;
+package com.streaming.analytics.analytics.shared;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +22,7 @@ public class Auditable {
 
     @LastModifiedDate
     private Date lastModifiedDate;
-    
+
     @CreatedDate
     private Date createdDate;
 
