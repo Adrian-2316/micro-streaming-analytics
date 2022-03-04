@@ -1,4 +1,4 @@
-package com.streaming.device.device.swagger;
+package com.streaming.device.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,21 +14,21 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 @EnableWebMvc
 public class SwaggerConfig {
-  @Bean
-  public Docket api() {
-    return new Docket(DocumentationType.SWAGGER_2)
-        .apiInfo(getApiInfo())
-        .select()
-        .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
-        .paths(PathSelectors.any())
-        .build();
-  }
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(getApiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
+                .paths(PathSelectors.any())
+                .build();
+    }
 
-  private ApiInfo getApiInfo() {
-    return new ApiInfoBuilder()
-        .title("Device Swagger")
-        .description("Device Swagger")
-        .version("v0")
-        .build();
-  }
+    private ApiInfo getApiInfo() {
+        return new ApiInfoBuilder()
+                .title("Device Swagger")
+                .description("Device Swagger")
+                .version("v0")
+                .build();
+    }
 }

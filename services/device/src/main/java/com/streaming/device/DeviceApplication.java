@@ -1,4 +1,4 @@
-package com.streaming.device.device;
+package com.streaming.device;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

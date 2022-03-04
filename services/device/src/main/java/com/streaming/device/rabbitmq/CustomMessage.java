@@ -1,4 +1,4 @@
-package com.streaming.device.device.rabbitmq;
+package com.streaming.device.rabbitmq;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,5 +10,5 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class CustomMessage {
-  private String message;
+    private String message;
 }
