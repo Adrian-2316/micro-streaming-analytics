@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.logging.Logger;
+
 @RestController
 @Api(tags = {"Device"})
 @SwaggerDefinition(tags = {
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MessagePublisher {
 
     private final RabbitTemplate template;
+
 
     public MessagePublisher(RabbitTemplate template) {
         this.template = template;
@@ -36,9 +39,12 @@ public class MessagePublisher {
     @Scheduled(fixedDelay = 10000)
     @PostMapping("/periodicSignal")
     public void sendSignal() {
+        Logger logger = Logger.getLogger("Scheduled tasks");
         Wrapper<Datastream> generatedRandomData = new Wrapper<>();
         Datastream datastream = new Datastream();
         datastream.generateRandomData(generatedRandomData);
         template.convertAndSend(MQConfig.EXCHANGE, MQConfig.ROUTING_KEY, generatedRandomData);
+        logger.info("Sending periodic signal...");
+
     }
 }
