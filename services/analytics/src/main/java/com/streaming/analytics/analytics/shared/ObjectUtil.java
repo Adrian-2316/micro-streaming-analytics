@@ -1,4 +1,4 @@
-package com.streaming.analytics.analytics.content.shared;
+package com.streaming.analytics.analytics.shared;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.BeanUtils;

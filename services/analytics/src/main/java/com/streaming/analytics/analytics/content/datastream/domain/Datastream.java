@@ -2,17 +2,18 @@ package com.streaming.analytics.analytics.content.datastream.domain;
 
 
 import com.streaming.analytics.analytics.content.datapoint.domain.Datapoint;
-import com.streaming.analytics.analytics.content.shared.Auditable;
+import com.streaming.analytics.analytics.content.statistics.domain.Statistics;
+import com.streaming.analytics.analytics.shared.Auditable;
 import lombok.*;
 
 import java.util.List;
 
-import static com.streaming.analytics.analytics.content.shared.ObjectUtil.copyProperties;
+import static com.streaming.analytics.analytics.shared.ObjectUtil.copyProperties;
 
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Datastream extends Auditable {
@@ -20,6 +21,7 @@ public class Datastream extends Auditable {
     private Long id;
     private String feed;
     private List<Datapoint> datapointList;
+    private Statistics statistics;
 
     private DatastreamJpa datastreamJpa;
 
@@ -29,6 +31,7 @@ public class Datastream extends Auditable {
         this.setId(datastreamJpa.getId());
         this.setFeed(datastreamJpa.getFeed());
         this.setDatapointList(datastreamJpa.getDatapointList());
+        this.setStatistics(datastreamJpa.getStatistics());
     }
 
     public void update(Datastream datastream) {

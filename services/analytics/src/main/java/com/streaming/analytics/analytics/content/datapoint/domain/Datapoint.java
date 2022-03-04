@@ -1,15 +1,15 @@
 package com.streaming.analytics.analytics.content.datapoint.domain;
 
 
-import com.streaming.analytics.analytics.content.shared.Auditable;
+import com.streaming.analytics.analytics.shared.Auditable;
 import lombok.*;
 
-import static com.streaming.analytics.analytics.content.shared.ObjectUtil.copyProperties;
+import static com.streaming.analytics.analytics.shared.ObjectUtil.copyProperties;
 
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Datapoint extends Auditable {
