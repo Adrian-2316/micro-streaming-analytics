@@ -14,6 +14,7 @@
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
 <br />
 <div align="center">
@@ -21,9 +22,11 @@
 <h3 align="center">Micro streaming analytics</h3>
 
   <p align="center">
-    Services IOT simulation & data async recolection 
-    <br />
-     <a href="/"><strong>Explore the API (Pending...) »</strong></a>
+    Services IOT simulation & data async recollection 
+    <br /><br>
+    <a href="https://heroku-analytics.herokuapp.com/swagger-ui/index.html#/"><strong>Explore analytics API: »</strong></a>
+    <br>
+<a href="https://heroku-device.herokuapp.com/swagger-ui/index.html#/"><strong>Explore device API: »</strong></a>
     <br />
     <br />
     <!--<a href="">Active analytics frontend</a>
@@ -82,6 +85,7 @@ It is mainly based on Java with Spring Boot.
 - [Swagger](https://swagger.io/)
 - [RabbitMQ](https://www.rabbitmq.com/)
 - [MongoDB](https://www.mongodb.com/)
+- [Heroku](http://www.heroku.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <!-- GETTING STARTED -->
@@ -123,7 +127,8 @@ To get a local copy up and running (inside docker folder):
 - [x] Scheduled tasks to send simulated data
 - [x] Docker-compose.yml file created
 - [x] Logging structure generated
-- [ ] Environment file added
+- [x] Environment file added
+- [x] Services deployed on Heroku
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
