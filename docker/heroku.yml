@@ -1,4 +1,0 @@
-build:
-  docker:
-    analytics: ./analytics/Dockerfile
-    device: ./device/Dockerfile
